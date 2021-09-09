@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BookHub-书库</title>
+    <link rel="icon" href="media/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="开源项目中文文档及书籍汇总">
+    <meta name="keywords" content="guide,docuemnt,quickstart,wiki,zh,zh-cn,维基,百科,文档,中文文档,翻译">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="https://bookhub.zone" title="BookHub"><img src="media/favicon.ico"></a>
+        </div>
+        <div class="txt">
+            <a href="https://bookhub.zone" title="BookHub">BookHub</a>
+        </div>
+        <div class="my">
+            <a href="https://github.com/dev2007/bookhub" title="GitHub仓库"><img src="media/github.png"></a>
+        </div>
+    </header>
+    <div class="title">
+        <h1>BookHub——中文文档汇集</h1>
+    </div>
+    <div id="app">
+        <ul class="wg-box">
+            <li v-for="book in books">
+                <a :href="book.link" :title="book.status"><img :src="book.img">
+                    <p>{{book.title}}</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <footer class="footerlink">
+        <p>友情链接：</p>
+        <a href="https://www.mortnon.fun/" target="_blank">卯榫 mortnon</a>
+    </footer>
+
+    <script src='js/prefixfree.min.js'></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                books: [
+                    { link: 'https://elasticsearch.bookhub.zone', img: 'img/c1.jpg', title: 'Elasticsearch', status: '翻译中' },
+                    { link: 'https://mysql.bookhub.zone', img: 'img/c2.jpg', title: 'MySQL', statu: '翻译中' },
+                    { link: '#', img: 'img/c3.jpg', title: '待上架', status: '待上架' },
+                    { link: '#', img: 'img/c4.jpg', title: '待上架', status: '待上架' },
+                    { link: '#', img: 'img/c5.jpg', title: '待上架', status: '待上架' },
+                    { link: '#', img: 'img/c6.jpg', title: '待上架', status: '待上架' },
+                    { link: '#', img: 'img/c7.jpg', title: '待上架', status: '待上架' },
+                    { link: '#', img: 'img/c8.jpg', title: '待上架', status: '待上架' },
+                    { link: '#', img: 'img/c9.jpg', title: '待上架', status: '待上架' },
+                    { link: '#', img: 'img/c10.jpg', title: '待上架', status: '待上架' }
+                ]
+            }
+        })
+    </script>
+
+</body>
+
+</html>
