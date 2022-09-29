@@ -12,9 +12,9 @@
 
 ## 网站链接
 
-[BookHub 书库](https://bookhub.zone)
+[BookHub 书库](https://bookhub.tech)
 
 文档链接：
 
-- [Elasticsearch](https://elasticsearch.bookhub.zone) （**翻译中** [项目地址](https://github.com/dev2007/elasticsearch-doc)）
-- [MySQL](https://mysql.bookhub.zone) （**翻译中** [项目地址](https://github.com/dev2007/mysql8-manual)）
+- [Elasticsearch](https://elasticsearch.bookhub.tech) （**翻译中** [项目地址](https://github.com/dev2007/elasticsearch-doc)）
+- [MySQL](https://mysql.bookhub.tech) （**翻译中** [项目地址](https://github.com/dev2007/mysql8-manual)）
