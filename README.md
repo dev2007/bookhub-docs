@@ -18,3 +18,5 @@
 
 - [Elasticsearch](https://elasticsearch.bookhub.tech) （**翻译中** [项目地址](https://github.com/dev2007/elasticsearch-doc)）
 - [MySQL](https://mysql.bookhub.tech) （**翻译中** [项目地址](https://github.com/dev2007/mysql8-manual)）
+- [Pac4j](https://pac4j.bookhub.tech)
+- [Micronaut](https://micronaut.bookhub.tech)(**翻译中**[项目地址](https://github.com/dev2007/micronaut-doc))
