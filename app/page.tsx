@@ -13,11 +13,6 @@ import {
   Tooltip,
 } from "@douyinfe/semi-ui";
 
-import {
-  IllustrationSuccess,
-  IllustrationSuccessDark,
-} from "@douyinfe/semi-illustrations";
-
 import styles from "./styles.module.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -74,6 +69,8 @@ const cardList = [
   },
   {
     title: "MySQL",
+    hot: "primary",
+    bold: "500",
     logo: "/logo/mysql.ico",
     link: { href: "https://mysql.bookhub.tech/" },
     cover: "/c3.jpg",
@@ -81,6 +78,8 @@ const cardList = [
   },
   {
     title: "PAC4j",
+    hot: "primary",
+    bold: "500",
     logo: "/logo/pac4j.ico",
     link: { href: "https://pac4j.bookhub.tech/" },
     cover: "/c4.jpg",
@@ -98,6 +97,8 @@ const cardList = [
   },
   {
     title: "Tesla",
+    hot: "primary",
+    bold: "500",
     logo: "/logo/tesla.ico",
     link: { href: "https://tesla.bookhub.tech/" },
     cover: "/c6.jpg",
@@ -105,6 +106,8 @@ const cardList = [
   },
   {
     title: "CPA",
+    hot: "primary",
+    bold: "500",
     logo: "/logo/cpa.png",
     link: { href: "https://cpa.dongfangzan.cn/" },
     cover: "/c7.jpg",
