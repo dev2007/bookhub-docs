@@ -16,13 +16,10 @@ import {
 import styles from "./styles.module.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { ReactNode } from "react";
 
 const { Header, Content, Footer } = Layout;
 
 const { Title, Paragraph, Text } = Typography;
-
-const { Meta } = Card;
 
 const imgList = ["/bg1.jpg", "/bg2.png", "/bg3.jpg"];
 
@@ -50,10 +47,12 @@ const textList = [
 const cardList = [
   {
     title: "Elasticsearch",
-    hot:true,
+    hot: true,
     logo: "/logo/elasticsearch.ico",
     link: { href: "https://elasticsearch.bookhub.tech" },
     cover: "/c8.jpg",
+    star: "https://img.shields.io/github/stars/dev2007/elasticsearch-doc?color=%2321BAB5&label=Stars&logo=github",
+    fork: "https://img.shields.io/github/forks/dev2007/elasticsearch-doc?color=%2321BAB5&label=Forks&logo=github",
     desc: "分布式、RESTful 风格的搜索和数据分析引擎—— Elasticsearch 中文文档",
   },
   {
@@ -62,6 +61,8 @@ const cardList = [
     logo: "/logo/micronaut.ico",
     link: { href: "https://micronaut.bookhub.tech/" },
     cover: "/c2.jpg",
+    star: "https://img.shields.io/github/stars/dev2007/micronaut-doc?label=Stars&logo=github&color=black",
+    fork: "https://img.shields.io/github/forks/dev2007/micronaut-doc?label=Forks&logo=github&color=black",
     desc: "基于 JVM 的现代全栈框架—— Micronaut 中文文档",
   },
   {
@@ -70,6 +71,8 @@ const cardList = [
     logo: "/logo/mysql.ico",
     link: { href: "https://mysql.bookhub.tech/" },
     cover: "/c3.jpg",
+    star: "https://img.shields.io/github/stars/dev2007/mysql8-manual?label=Stars&logo=github&color=%23396D94",
+    fork: "https://img.shields.io/github/forks/dev2007/mysql8-manual?label=Forks&logo=github&color=%23396D94",
     desc: "最流行的关系型数据库管理系统之一—— MySQL 中文文档",
   },
   {
@@ -78,6 +81,8 @@ const cardList = [
     logo: "/logo/pac4j.ico",
     link: { href: "https://pac4j.bookhub.tech/" },
     cover: "/c4.jpg",
+    star: "https://img.shields.io/github/stars/dev2007/pac4j-docs?label=Stars&logo=github&color=black",
+    fork: "https://img.shields.io/github/forks/dev2007/pac4j-docs?label=Forks&logo=github&color=black",
     desc: "支持多种协议多种框架的权限引擎—— PAC4j 中文文档",
   },
   {
@@ -86,6 +91,8 @@ const cardList = [
     logo: "/logo/azeroth.ico",
     link: { href: "https://azeroth.bookhub.tech/" },
     cover: "/c5.jpg",
+    star: "https://img.shields.io/github/stars/dev2007/azerothcore-doc?label=Stars&logo=github&color=black",
+    fork: "https://img.shields.io/github/forks/dev2007/azerothcore-doc?label=Forks&logo=github&color=black",
     desc: "Azeroth 魔兽世界服务端部署中文文档",
   },
   {
@@ -94,6 +101,8 @@ const cardList = [
     logo: "/logo/tesla.ico",
     link: { href: "https://tesla.bookhub.tech/" },
     cover: "/c6.jpg",
+    star: "https://img.shields.io/github/stars/dongfangzan/tesla-java-sdk?style=social",
+    fork: "https://img.shields.io/github/forks/dongfangzan/tesla-java-sdk?label=Forks&style=social",
     desc: "Tesla API 中文文档",
   },
   {
@@ -102,6 +111,8 @@ const cardList = [
     logo: "/logo/cpa.png",
     link: { href: "https://cpa.dongfangzan.cn/" },
     cover: "/c7.jpg",
+    star: "",
+    fork: "",
     desc: "CPA 学习之旅",
   },
 ];
@@ -274,7 +285,7 @@ export default function Home() {
               title={
                 <Text
                   icon={<SemiImage src={v.logo} width={24} height={24} />}
-                  type={v.hot ? "danger": undefined}
+                  type={v.hot ? "danger" : undefined}
                   strong={v.hot}
                 >
                   {v.title}
@@ -286,7 +297,21 @@ export default function Home() {
                 <Text link={v.link}>👉立即阅读 {v.hot ? "🔥" : ""}</Text>
               }
             >
-              <Text>{v.desc}</Text>
+              <div>
+                <div>
+                  <SemiImage
+                    className={styles.githubImg}
+                    src={v.star}
+                    alt="star"
+                  />
+                  <SemiImage
+                    className={styles.githubImg}
+                    src={v.fork}
+                    alt="fork"
+                  />
+                </div>
+                <Text>{v.desc}</Text>
+              </div>
             </Card>
           ))}
         </CardGroup>
