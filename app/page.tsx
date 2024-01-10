@@ -16,6 +16,7 @@ import {
 import styles from "./styles.module.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { ReactNode } from "react";
 
 const { Header, Content, Footer } = Layout;
 
@@ -49,9 +50,7 @@ const textList = [
 const cardList = [
   {
     title: "Elasticsearch",
-    fire: "🔥",
-    hot: "danger",
-    bold: "700",
+    hot:true,
     logo: "/logo/elasticsearch.ico",
     link: { href: "https://elasticsearch.bookhub.tech" },
     cover: "/c8.jpg",
@@ -59,9 +58,7 @@ const cardList = [
   },
   {
     title: "Micronaut",
-    fire: "🔥",
-    hot: "danger",
-    bold: "700",
+    hot: true,
     logo: "/logo/micronaut.ico",
     link: { href: "https://micronaut.bookhub.tech/" },
     cover: "/c2.jpg",
@@ -69,8 +66,7 @@ const cardList = [
   },
   {
     title: "MySQL",
-    hot: "primary",
-    bold: "500",
+    hot: false,
     logo: "/logo/mysql.ico",
     link: { href: "https://mysql.bookhub.tech/" },
     cover: "/c3.jpg",
@@ -78,8 +74,7 @@ const cardList = [
   },
   {
     title: "PAC4j",
-    hot: "primary",
-    bold: "500",
+    hot: false,
     logo: "/logo/pac4j.ico",
     link: { href: "https://pac4j.bookhub.tech/" },
     cover: "/c4.jpg",
@@ -87,9 +82,7 @@ const cardList = [
   },
   {
     title: "Azeroth",
-    fire: "🔥",
-    hot: "danger",
-    bold: "700",
+    hot: true,
     logo: "/logo/azeroth.ico",
     link: { href: "https://azeroth.bookhub.tech/" },
     cover: "/c5.jpg",
@@ -97,8 +90,7 @@ const cardList = [
   },
   {
     title: "Tesla",
-    hot: "primary",
-    bold: "500",
+    hot: false,
     logo: "/logo/tesla.ico",
     link: { href: "https://tesla.bookhub.tech/" },
     cover: "/c6.jpg",
@@ -106,8 +98,7 @@ const cardList = [
   },
   {
     title: "CPA",
-    hot: "primary",
-    bold: "500",
+    hot: false,
     logo: "/logo/cpa.png",
     link: { href: "https://cpa.dongfangzan.cn/" },
     cover: "/c7.jpg",
@@ -283,8 +274,8 @@ export default function Home() {
               title={
                 <Text
                   icon={<SemiImage src={v.logo} width={24} height={24} />}
-                  type={v.hot}
-                  weight={v.bold}
+                  type={v.hot ? "danger": undefined}
+                  strong={v.hot}
                 >
                   {v.title}
                 </Text>
@@ -292,7 +283,7 @@ export default function Home() {
               headerLine={false}
               className={styles.card}
               headerExtraContent={
-                <Text link={v.link}>👉立即阅读 {v.fire}</Text>
+                <Text link={v.link}>👉立即阅读 {v.hot ? "🔥" : ""}</Text>
               }
             >
               <Text>{v.desc}</Text>
