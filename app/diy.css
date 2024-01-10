@@ -1,0 +1,7 @@
+.semi-typography a {
+  color: var(--semi-color-text-0);
+}
+
+.semi-typography a:visited {
+  color: var(--semi-color-text-0);
+}

@@ -16,6 +16,7 @@ import {
 import styles from "./styles.module.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import "./diy.css"
 
 const { Header, Content, Footer } = Layout;
 
@@ -288,7 +289,9 @@ export default function Home() {
                   type={v.hot ? "danger" : undefined}
                   strong={v.hot}
                 >
-                  {v.title}
+                  <a style={v.hot ? { color: "red" } : {}} href={v.link.href}>
+                    {v.title}
+                  </a>
                 </Text>
               }
               headerLine={false}
@@ -310,7 +313,9 @@ export default function Home() {
                     alt="fork"
                   />
                 </div>
-                <Text>{v.desc}</Text>
+                <Text>
+                <a href={v.link.href}>{v.desc}</a>
+                </Text>
               </div>
             </Card>
           ))}
