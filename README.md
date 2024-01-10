@@ -12,7 +12,7 @@
 
 ## 网站链接
 
-[BookHub 书库](https://bookhub.tech)
+[BookHub 书库](https://docs.bookhub.tech)
 
 文档链接：
 

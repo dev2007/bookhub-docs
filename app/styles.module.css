@@ -1,0 +1,149 @@
+.fullscreen {
+    min-height: 100vh;
+}
+
+.header {
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 9px 0;
+    width: 80%;
+}
+
+.navLink {
+    color: black;
+    text-decoration: none;
+}
+
+.navLink:hover .first {
+    color: rgb(220, 220, 220);
+}
+
+.navLink:hover .second {
+    color: black;
+}
+
+.navLink:hover .navHeader > img {
+    transform: scale(1.1);
+}
+
+.navHeader {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    justify-items: center;
+}
+
+.navGitHub,
+.navGitee,
+.navBlog,
+.navWechat {
+    margin: 0 4px;
+}
+
+.navGitHub {
+    width: 32px;
+    height: 32px;
+}
+
+.navGitee {
+    width: 34px;
+    height: 34px;
+}
+
+.navBlog {
+    width: 36px;
+    height: 36px;
+}
+
+.navWechat {
+    width: 36px;
+    height: 36px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.menu>p {
+    font-weight: bold;
+    font-size: 1.5rem;
+    height: 36px;
+    line-height: 36px;
+    margin: 0 4px;
+}
+
+.first {
+    margin: 0 4px;
+}
+
+.second {
+    color: rgb(220, 220, 220);
+}
+
+.title {
+    color: rgba(0, 0, 0, .6);
+    margin: 0 4px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 243, 243);
+}
+
+.carousel {
+    width: 80%;
+    height: 400px;
+    margin: 8px 0;
+}
+
+
+.colorStyle {
+    color: #1C1F23;
+}
+
+
+.titleStyle {
+    position: absolute;
+    top: 80px;
+    left: 100px;
+    color: #1C1F23;
+
+}
+
+.booklist {
+    margin: 16px 0;
+    width: 80%;
+    justify-content: center;
+}
+
+.cardLink {
+    text-decoration: none;
+}
+
+.card {
+    width: 270px;
+}
+
+.footer {
+    text-align: center;
+    color: rgba(0, 0, 0, .6);
+    background-color: rgb(255, 243, 243);
+    padding: 4px 0;
+}
+
+.copyright {
+    color: rgba(0, 0, 0, .6);
+    text-decoration: none;
+}
