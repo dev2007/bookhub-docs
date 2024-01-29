@@ -22,7 +22,7 @@ const { Header, Content, Footer } = Layout;
 
 const { Title, Paragraph, Text } = Typography;
 
-const imgList = ["/bg1.jpg", "/bg2.png", "/bg3.jpg"];
+const imgList = ["/bg1.jpg", "/bg2.jpg", "/bg3.jpg"];
 
 const textList = [
   [
