@@ -124,6 +124,10 @@ export default function Home() {
     router.push("https://github.com/mortise-and-tenon");
   };
 
+  const mortnonOnClick = ()=>{
+    router.push("https://wwww.mortnon.tech");
+  }
+
   const giteeOnClick = () => {
     router.push("https://gitee.com/mortise-and-tenon");
   };
@@ -147,6 +151,22 @@ export default function Home() {
             </div>
           </a>
           <div className={styles.navHeader}>
+          <Tooltip
+              style={{
+                backgroundColor: "white",
+              }}
+              content={<Text>MortNon 框架</Text>}
+              arrowPointAtCenter={false}
+              position="bottom"
+            >
+              <Avatar
+                alt="mortnon"
+                size="small"
+                src="/mortnon.png"
+                className={styles.navGitee}
+                onClick={mortnonOnClick}
+              />
+            </Tooltip>
             <Tooltip
               style={{
                 backgroundColor: "white",
@@ -323,7 +343,7 @@ export default function Home() {
       </Content>
       <Footer className={styles.footer}>
         <a href="https://luansheng.fun" className={styles.copyright}>
-          ©2023 Mortnon.
+        Copyright © 2022~{new Date().getFullYear()} bookHub.tech
         </a>
       </Footer>
     </Layout>
